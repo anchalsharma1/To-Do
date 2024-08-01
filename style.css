@@ -88,10 +88,19 @@ ul li::before {
 ul li.checked {
     color: #555;
     text-decoration: line-through;
+    position: relative;
+    padding-left: 25px;
 }
 
 ul li.checked::before {
     background-image: url(images/images.png);
+    content: '✔';
+    color: blue;
+    position: relative;
+    left: 0;
+    top: 50%;
+    transform: translate3d(-50%, -55%, 0);
+    margin-right: 8px;
 }
 
 ul li span {
@@ -105,7 +114,9 @@ ul li span {
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
-}
+    cursor: pointer;
+    padding-left: 10px;
+} 
 
 ul li span:hover {
     background: #edeef0;
