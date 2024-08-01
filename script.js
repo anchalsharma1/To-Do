@@ -13,9 +13,10 @@ function addTask(){
          let span = document.createElement("span");
          span.innerHTML = "\u00d7";
          li.appendChild(span);
-     }
+     
          inputBox.value = "";
-     saveData();
+         saveData();
+    }
  }
 
  listContainer.addEventListener("click", function(e){
@@ -34,6 +35,9 @@ function addTask(){
  }
 
  function showTask(){
-     listContainer.innerHTML = localStorage.getItem("data");
+    const storedData = localStorage.gotItem("data");
+     if (storedData) {
+         listContainer.innerHTML = storedData;
+     }
  }
  showTask();
